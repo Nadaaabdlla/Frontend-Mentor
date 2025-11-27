@@ -1,0 +1,214 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "DMSans";
+}
+@font-face {
+  font-family: "DMSansItalic";
+  src: url("assets/fonts/DMSans-Italic-VariableFont_opsz\,wght.ttf")
+    format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "DMSans";
+  src: url("assets/fonts/DMSans-VariableFont_opsz\,wght.ttf") format("truetype");
+  font-weight: 500;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(243, 239, 239);
+}
+#topLeft,
+#topMed,
+#topRight,
+#centerLeft,
+#centerRight,
+#bottomLeft,
+#bottomMed {
+  padding: 10%;
+}
+div {
+  padding: 5%;
+  border-radius: 10px;
+}
+p {
+  font-size: 18px;
+}
+img {
+  width: 100px;
+  height: 100px;
+}
+#gridCon {
+  min-height: 50vh;
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 0.25fr);
+  grid-template-areas:
+    "topLeft topMed topMed topRight"
+    "topLeft topMed topMed topRight"
+    "topLeft centerLeft centerRight topRight"
+    "bottomLeft centerLeft centerRight topRight"
+    "bottomLeft bottomMed bottomRight bottomRight"
+    /* "attribution attribution attribution attribution" */;
+  justify-content: center;
+  align-content: center;
+  gap: 2%;
+}
+#topLeft {
+  grid-area: topLeft;
+  background-color: hsl(31, 66%, 93%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6%;
+}
+#topLeft span {
+  color: hsl(256, 67%, 59%);
+  font-family: "DMSansItalic";
+  font-weight: 500;
+  letter-spacing: -2px;
+}
+#topLeft img {
+  width: 80%;
+  height: 15%;
+}
+#topLeft p {
+  font-size: xx-large;
+  font-weight: 500;
+  letter-spacing: -2px;
+}
+#topMed {
+  grid-area: topMed;
+  background-color: hsl(256, 67%, 59%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1%;
+  align-items: center;
+  justify-content: center;
+}
+#topMed span {
+  color: hsl(39, 100%, 71%);
+}
+#topMed img {
+  width: 30%;
+  height: 10%;
+}
+#topMed p {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+#topMed #review {
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+#topRight {
+  grid-area: topRight;
+  background-color: hsl(254, 88%, 90%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2%;
+  position: relative;
+  overflow: hidden;
+}
+#topRight img {
+  height: 60%;
+  width: 180%;
+  position: relative;
+  right: -42%;
+}
+#topRight :first-child {
+  font-size: xx-large;
+  font-weight: 500;
+}
+#centerLeft {
+  grid-area: centerLeft;
+  background-color: hsl(0, 0%, 100%);
+  color: black;
+  overflow: hidden;
+}
+#centerLeft img {
+  height: 30%;
+  width: 154%;
+}
+#centerLeft p {
+  font-size: x-large;
+  font-weight: 500;
+}
+#centerRight {
+  grid-area: centerRight;
+  background-color: hsl(39, 100%, 71%);
+  overflow: hidden;
+}
+#centerRight p {
+  font-size: x-large;
+  font-weight: 500;
+}
+#centerRight img {
+  height: 60%;
+  width: 100%;
+  position: relative;
+  bottom: -15%;
+}
+#bottomLeft {
+  grid-area: bottomLeft;
+  background-color: hsl(39, 100%, 71%);
+  display: flex;
+  flex-direction: column;
+  gap: 10%;
+}
+#bottomLeft p {
+  font-size: xx-large;
+  font-weight: 500;
+}
+#bottomLeft img {
+  height: 50%;
+  width: 95%;
+}
+#bottomMed {
+  grid-area: bottomMed;
+  background-color: hsl(0, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 10%;
+}
+#bottomMed #per {
+  font-size: 3rem;
+}
+#bottomMed p {
+  font-size: medium;
+}
+#bottomMed img {
+  height: 30%;
+  width: 90%;
+}
+#bottomRight {
+  grid-area: bottomRight;
+  background-color: hsl(256, 67%, 59%);
+  color: white;
+  display: flex;
+  align-items: center;
+  column-gap: 5%;
+}
+#bottomRight img {
+  height: 100%;
+  width: 45%;
+}
+#bottomRight p {
+  font-size: 2rem;
+}
+.attribution {
+  grid-area: attribution;
+  text-align: center;
+}

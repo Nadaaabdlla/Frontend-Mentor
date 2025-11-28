@@ -48,7 +48,7 @@ img {
 }
 #gridCon {
   min-height: 50vh;
-  width: 80%;
+  min-width: 80%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(5, 0.25fr);
@@ -58,7 +58,7 @@ img {
     "topLeft centerLeft centerRight topRight"
     "bottomLeft centerLeft centerRight topRight"
     "bottomLeft bottomMed bottomRight bottomRight"
-    /* "attribution attribution attribution attribution" */;
+    ;
   justify-content: center;
   align-content: center;
   gap: 2%;
@@ -96,16 +96,20 @@ img {
   align-items: center;
   justify-content: center;
 }
-#topMed span {
+#topMed #sp1 {
   color: hsl(39, 100%, 71%);
+}
+#topMed #sp2 {
+  font-family: "DMSansItalic";
 }
 #topMed img {
   width: 30%;
   height: 10%;
 }
 #topMed p {
-  font-size: 2.5rem;
+  font-size: 4rem;
   font-weight: 500;
+  text-align: center;
 }
 #topMed #review {
   font-size: 0.75rem;
@@ -159,7 +163,7 @@ img {
   height: 60%;
   width: 100%;
   position: relative;
-  bottom: -15%;
+  bottom: -38%;
 }
 #bottomLeft {
   grid-area: bottomLeft;
@@ -212,3 +216,105 @@ img {
   grid-area: attribution;
   text-align: center;
 }
+@media (max-width: 1300px) {
+  #centerRight p{
+     font-size: 1.4rem;
+   }
+   #topMed p{
+     font-size: 3rem;
+   }
+   #centerRight img {
+    bottom: -25%;
+  }
+ }
+@media (max-width: 990px) {
+  #centerRight p{
+     font-size: 1.4rem;
+   }
+   #topMed p{
+     font-size: 2rem;
+   }
+ }
+@media (max-width: 685px) {
+ #centerRight p{
+    font-size: 1.4rem;
+  }
+  #topMed p{
+    font-size: 2rem;
+  }
+  #centerRight img {
+    bottom: -15%;
+  }
+}
+@media (max-width: 620px) {
+  #gridCon {
+    gap: 20px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 0.5fr 0.5fr 2fr 1fr 0.3fr 0.5fr 0.5fr;
+    grid-template-areas:
+      "topMed"
+      "centerLeft"
+      "centerRight"
+      "topRight"
+      "bottomRight"
+      "bottomMed"
+      "topLeft"
+      "bottomLeft";
+  }
+  #topLeft,
+  #topMed,
+  #topRight,
+  #centerLeft,
+  #centerRight,
+  #bottomLeft,
+  #bottomMed {
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+    justify-content: center;
+  }
+  #bottomRight {
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+  }
+  p {
+    font-size: 2rem;
+  }
+  #topRight img {
+    height: 60%;
+    width: 90%;
+    position: relative;
+    right: 0%;
+  }
+  #centerLeft img {
+    width: 100%;
+  }
+  #topLeft img {
+    height: 50%;
+  }
+  #bottomLeft img {
+    height: 70%;
+    width: 70%;
+  }
+  #bottomMed img {
+    height: 70%;
+    width: 70%;
+  }
+  #bottomRight img {
+    height: 50%;
+    width: 90%;
+  }
+  #bottomRight p {
+    text-align: center;
+    font-size: 3rem;
+  }
+  #topMed p {
+    font-size: 3.5rem;
+  }
+}
+@media (max-width: 380px) {
+  #bottomRight p {
+    font-size: 2rem;
+  }
+} 
